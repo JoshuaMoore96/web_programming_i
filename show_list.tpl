@@ -5,8 +5,11 @@
 <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" >
 </head>
 <body>
-<h3 class="w3-block w3-teal w3-center">Basic Todo List, version 1.2</h3>
-<table class="w3-table w3-hoverable w3-border">
+<h3 class="w3-block w3-teal w3-center">Basic Todo List, version 1.1</h3>
+<table class="w3-table w3-bordered w3-border">
+<hr>
+Hi, {{username}} !
+<hr>
 %for row in rows:
     <tr>
         <td>
@@ -29,5 +32,9 @@
 %end
 </table>
 <a href="/new_item"><button class="w3-button w3-block w3-teal">New item...</button></a>
+<hr>
+<a href="/login"><button class="w3-button w3-block w3-blue">Login...</button></a>
+<hr>
+<a href="/logout"><button class="w3-button w3-block w3-blue">Logout...</button></a>
 </body>
 </html>
