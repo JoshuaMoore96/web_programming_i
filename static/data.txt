@@ -1,0 +1,5 @@
+<ul>
+<li>Apples</li>
+<li>Oranges</li>
+<li>Bananas</li>
+</ul>

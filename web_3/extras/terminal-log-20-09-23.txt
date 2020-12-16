@@ -1,0 +1,166 @@
+$ cd ~
+$ mkdir .ssh
+mkdir: cannot create directory ‘.ssh’: File exists
+$ cd .ssh
+$ ls
+authorized_keys  id_rsa  id_rsa.pub  id_rsa2  id_rsa2.pub  known_hosts
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/drdelozier/.ssh/id_rsa): /home/drde
+lozier/.ssh/id_rsa3
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/drdelozier/.ssh/id_rsa3.
+Your public key has been saved in /home/drdelozier/.ssh/id_rsa3.pub.
+The key fingerprint is:
+SHA256:2/4zNJltFGwLZSK/w40WYP21Sse1Q95NI9yFRV14/pw drdelozier@green-liveconsol
+
+e6
+The key's randomart image is:
++---[RSA 2048]----+
+|          +.oo+=O|
+|         . +o=*+*|
+|            o+=BB|
+|           . *+B+|
+|        S   B=+.+|
+|         o .=ooEo|
+|        . .. o   |
+|         .  o    |
+|          ...o   |
++----[SHA256]-----+
+$ ls 
+authorized_keys  id_rsa.pub  id_rsa2.pub  id_rsa3.pub
+id_rsa           id_rsa2     id_rsa3      known_hosts
+$ cat id_rsa3.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrtlPUWpUxgdSE9ctKBDOuv0KSvfF21Ztnvm0f1ydzgH3i765GmDSzBN9VH5E+ZsDf13GZUG77aZgaJ1Ufs4xafROUTVRMbGwWBMxNEq09Gllu044Czr0qRGLbdBfrFQeIVuntKqn9Ntu6vHpB7G4RGQMboEEE3VEvu1p1kjoeehDF87S4qZIroCx8OAO1Wt0Kjw+UB1osnNmcNsaTl+b+xSmwHSJvI1FWP/l3bnq21L7v4RUdwhAq3UsEcuZqH4hMxAkZl/5EM+qp6FwxNc2+5JK/x8PVfhQkDpo/ivybZamlb1U2WOd80nZim70KiBOB6l5bDwM6WP/WeS0si7nT drdelozier@green-liveconsole6
+$ cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDYg2h8RnlVgfwwSmLcYUZViNp4YyygMOODc8o9kL/sC5ZGyX8oR0ILeTxRdv2PDIOEqKpnA9wXM0ytYo7PTgk5Y6aLSYE0z+Csa3GiaDRBChGTi3Uo0Au9LZR9PzxHZgnewSwHFmeQWM10nl6n5zEmPlT9W1GlT6AFRLUCYJJwTdYipBZwUhe2Vmc0pEQBTtr8YRVWUaWu6Lu0DaftTcWEpM0Z/yz0rXDUwDlYrj0GkzSSZvL0fTGwlArZOldIPqaLPWEUiF1/3/D5GwkK6n5Be48Xj228tFigNZHsK4oeI8eE2k1RvITZnyJpntmwnfFME3fLHMkFd2VJRrM4g4fV drdelozier@conrad-liveconsole4
+$ cat id_rsa3.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrtlPUWpUxgdSE9ctKBDOuv0KSvfF21Ztnvm0f1ydzgH3i765GmDSzBN9VH5E+ZsDf13GZUG77aZgaJ1Ufs4xafROUTVRMbGwWBMxNEq09Gllu044Czr0qRGLbdBfrFQeIVuntKqn9Ntu6vHpB7G4RGQMboEEE3VEvu1p1kjoeehDF87S4qZIroCx8OAO1Wt0Kjw+UB1osnNmcNsaTl+b+xSmwHSJvI1FWP/l3bnq21L7v4RUdwhAq3UsEcuZqH4hMxAkZl/5EM+qp6FwxNc2+5JK/x8PVfhQkDpo/ivybZamlb1U2WOd80nZim70KiBOB6l5bDwM6WP/WeS0si7nT drdelozier@green-liveconsole6
+$ cat id_rsa3.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCrtlPUWpUxgdSE9ctKBDOuv0KSvfF21Ztnvm0f1ydzgH3i765GmDSzBN9VH5E+ZsDf13GZUG77aZgaJ1Ufs4xafROUTVRMbGwWBMxNEq09Gllu044Czr0qRGLbdBfrFQeIVuntKqn9Ntu6vHpB7G4RGQMboEEE3VEvu1p1kjoeehDF87S4qZIroCx8OAO1Wt0Kjw+UB1osnNmcNsaTl+b+xSmwHSJvI1FWP/l3bnq21L7v4RUdwhAq3UsEcuZqH4hMxAkZl/5EM+qp6FwxNc2+5JK/x8PVfhQkDpo/ivybZamlb1U2WOd80nZim70KiBOB6l5bDwM6WP/WeS0si7nT drdelozier@green-liveconsole6
+$ ls
+authorized_keys  id_rsa.pub  id_rsa2.pub  id_rsa3.pub
+id_rsa           id_rsa2     id_rsa3      known_hosts
+$ cd ..
+$ ls
+README.txt  downloads  exampleblog  examples  projects  projects.old  sites
+$ mkdir projects
+mkdir: cannot create directory ‘projects’: File exists
+$ cd projects
+$ ls
+advanced_database  dev-data  www-data
+$ git clone git@github.com:drdelozier/web_programming_i.git
+Cloning into 'web_programming_i'...
+remote: Enumerating objects: 47, done.
+remote: Counting objects: 100% (47/47), done.
+remote: Compressing objects: 100% (38/38), done.
+remote: Total 47 (delta 20), reused 33 (delta 9), pack-reused 0
+Receiving objects: 100% (47/47), 7.51 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (20/20), done.
+Checking connectivity... done.
+$ ls
+advanced_database  dev-data  web_programming_i  www-data
+$ cd web*
+$ ls
+README.md      create_todo_db.py  show_list.tpl  web 1
+bottle_app.py  new_item.tpl       todo.db        web_0
+$ ls -la
+total 52
+drwxrwxr-x 5 drdelozier registered_users 4096 Sep 24 01:07 .
+drwxrwxr-x 6 drdelozier registered_users 4096 Sep 24 01:07 ..
+drwxrwxr-x 8 drdelozier registered_users 4096 Sep 24 01:07 .git
+-rw-rw-r-- 1 drdelozier registered_users 1799 Sep 24 01:07 .gitignore
+-rw-rw-r-- 1 drdelozier registered_users   67 Sep 24 01:07 README.md
+-rw-rw-r-- 1 drdelozier registered_users 1363 Sep 24 01:07 bottle_app.py
+-rw-rw-r-- 1 drdelozier registered_users  646 Sep 24 01:07 create_todo_db.py
+-rw-rw-r-- 1 drdelozier registered_users  184 Sep 24 01:07 new_item.tpl
+-rw-rw-r-- 1 drdelozier registered_users  304 Sep 24 01:07 show_list.tpl
+-rw-rw-r-- 1 drdelozier registered_users 8192 Sep 24 01:07 todo.db
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 01:07 web 1
+drwxrwxr-x 2 drdelozier registered_users 4096 Sep 24 01:07 web_0
+$ ls .git
+HEAD      config       hooks  info  objects      refs
+branches  description  index  logs  packed-refs
+$ cd ..
+# A very simple Bottle Hello World app for you to get started with...
+drwxrwxr-x 18 drdelozier registered_users 4096 Sep 24 00:26 ..
+drwxrwxr-x  6 drdelozier registered_users 4096 Sep 24 00:24 advanced_database
+drwxrwxr-x  6 drdelozier registered_users 4096 Sep 24 00:05 dev-data
+drwxrwxr-x  5 drdelozier registered_users 4096 Sep 24 01:15 dev-web
+drwxrwxr-x  5 drdelozier registered_users 4096 Sep 24 01:07 web_programming_i
+drwxrwxr-x  6 drdelozier registered_users 4096 Sep 24 00:14 www-data
+drwxrwxr-x  5 drdelozier registered_users 4096 Sep 24 01:14 www-web
+$ cd www-web
+$ cat bottle_app.py
+
+# A very simple Bottle Hello World app for you to get started with...
+from bottle import default_app, route
+
+@route('/')
+def hello_world():
+    return 'Hello from Bottle!'
+
+application = default_app()
+
+$ cp ../web_prog*/bottle_app.py .
+$ cd ..
+$ cd dev-web
+$ cp ../web_prog*/bottle_app.py .
+$ vi bottle_app.py
+$ cd ..
+$ ls
+advanced_database  dev-data  dev-web  web_programming_i  www-data  www-web
+$ cd dev-web
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   show_list.tpl
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git add --all
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   show_list.tpl
+
+$ git commit -m "Added smiley face to link"
+[master b9956be] Added smiley face to link
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+$ git push 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 319 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To git@github.com:drdelozier/web_programming_i.git
+   82ac302..b9956be  master -> master
+$ cd ..
+$ ls
+advanced_database  dev-data  dev-web  web_programming_i  www-data  www-web
+$ cd www-web
+$ ls
+README.md    bottle_app.py      new_item.tpl   todo.db  web_0
+__pycache__  create_todo_db.py  show_list.tpl  web 1
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:drdelozier/web_programming_i
+   82ac302..b9956be  master     -> origin/master
+Updating 82ac302..b9956be
+Fast-forward
+ show_list.tpl | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+$ 
+

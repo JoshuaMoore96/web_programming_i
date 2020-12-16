@@ -1,0 +1,1 @@
+Useful page for HTML attributes: https://www.w3schools.com/tags/ref_attributes.asp
