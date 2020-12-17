@@ -99,7 +99,7 @@ def post_register():
     redirect('/')
 
 
-@get('/')
+@get('/show_list_old')
 def get_show_list():
     session = get_session(request, response)
     if session['username'] == 'Guest':
@@ -109,7 +109,7 @@ def get_show_list():
     result=[dict(r) for r in result]
     return template("show_list", rows=result, session=session)
 
-@get('/show_list_ajax')
+@get('/')
 def get_show_list_ajax():
     session = get_session(request, response)
     if session['username'] == 'Guest':
@@ -186,11 +186,9 @@ def get_new_item():
     return template("new_item")
 
 
-# <<<<<<< HEAD
 @get("/bubbles")
 def get_bubbles():
     return template("bubbles")
-# =======
 
 @post('/new_item')
 def post_new_item():
@@ -201,8 +199,6 @@ def post_new_item():
     new_task = request.forms.get("new_task").strip()
     db['todo'].insert({'task':new_task, 'status':False})
     redirect('/')
-
-# >>>>>>> upstream/master
 
 
 application = default_app()
