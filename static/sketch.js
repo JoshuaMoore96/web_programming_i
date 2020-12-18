@@ -116,9 +116,33 @@ function setup() {
   coin = new Coin(x, y);
   power = new PowerUp(x, y, false, 0, 0);
 
+  showHelp = true;
+
 }
 function draw() {
     background(0);
+
+    if (showHelp && !cursorMode && !debug){
+        strokeWeight(0);
+        textAlign(LEFT);
+        fill(255);
+        textSize(15);
+        text('BUBBLE GAME' +
+            '\nClick anywhere on the screen to start.' +
+            '\n\nUse the mouse to control the worm.' +
+            '\nAvoid contact with any bubbles.' +
+            '\nThe chaser bubble will constantly pursue the worm,' +
+            '\nand launch bubble-spawns across the screen randomly.' +
+            '\n\nPOWERUPS:' +
+            '\nPowerups will spawn periodically, and your chance' +
+            '\nof being offered a powerup increases as you score.' +
+            '\nRED\t- SHIELD ' +
+            '\nBLUE\t- SLO-MO' +
+            '\nGREEN\t- HUGE COINS' +
+            '\n\n(h) Hide help screen' +
+            '\n(d) Show debug info',
+        20, 20);
+    }
 
     r = shift(r, tr);
     g = shift(g, tg);
@@ -366,6 +390,10 @@ function keyPressed(){
     if (keyCode === 68){
         debug = !debug;
         console.log('debug mode: ' + debug);
+    }
+    if (keyCode === 72){
+        console.log("toggled help")
+        showHelp = !showHelp;
     }
     //debug commands
     if(debug){

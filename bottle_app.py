@@ -173,7 +173,8 @@ def post_update_task():
         return
     id = int(request.forms.get("id").strip())
     updated_task = request.forms.get("updated_task").strip()
-    db['todo'].update({'id':id, 'task':updated_task},['id'])
+    Priority = request.forms.get("Priority")
+    db['todo'].update({'id':id, 'task':updated_task, 'Priority':Priority},['id'])
     redirect('/')
 
 
@@ -197,7 +198,8 @@ def post_new_item():
         redirect('/login')
         return
     new_task = request.forms.get("new_task").strip()
-    db['todo'].insert({'task':new_task, 'status':False})
+    Priority = request.forms.get("Priority")
+    db['todo'].insert({'task':new_task, 'Priority':Priority, 'status':False})
     redirect('/')
 
 
